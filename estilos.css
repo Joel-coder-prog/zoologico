@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+   overflow-x: hidden;
+   font-family: 'Roboto', sans-serif;
+}
+
+/*menu navegacion*/
+#header{
+    position: relative;
+    width: 100%;
+}
+
+.menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+}
+
+.btn-menu{
+    display: none;
+}
+
+.menu .logobox{
+    margin-left: 30px;
+}
+
+.menu .logobox h1 {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.menu .logobox > a > i{
+    margin-right: 30px;
+}
+
+.menu .list-container{
+    margin-right: 30px;
+}
+
+.menu .list-container .list{
+    display: flex;
+}
+
+.menu .list-container .list li{
+    list-style: none;
+}
+
+.menu .list-container .list li a{
+    text-decoration: none;
+    color: white;
+    margin: 0px 20px;
+    font-size: 20px;
+    margin: 0px 6px;
+    padding: 5px;
+    border-radius: 3px;
+    transition: 300ms;
+}
+
+.menu .list-container .list li a:hover{
+    color: #f1bf60;
+}
+
+.img-header{
+    background: url(imagenes/portada.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: soft-light;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.img-header .welcome{
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.img-header .welcome h4{
+    color: white;
+    font-weight: 400;
+    font-size: 30px;
+    text-align: center;
+}
+
+.img-header .welcome h2{
+    margin-top: 50px;
+}
+
+.img-header .welcome h1{
+    text-decoration: none;
+    color: white;
+    font-size: 50px;
+    font-weight: 400;
+}
+
+.img-header .welcome li{
+    margin-right: 30px;
+}
+
+/*nosotros*/
+.about-us{
+    width: 100%;
+}
+
+.about-us .info{
+    width: 100%;
+    margin-top: 100px;
+}
+
+.about-us .info h1{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.about-us .info p{
+    width: 80%;
+    margin: 50px auto;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+/*contenido*/
+.about-us .free-content{
+    width: 100%;
+    margin-top: 100px;
+    background-color: #0e7bf7;
+    padding: 30px;
+}
+
+.about-us .free-content h4{
+    text-align: center;
+    font-size: 40px;
+    font-weight: 400;
+    color: white;
+}
+
+.about-us .free-content .icons{
+    width: 90%;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.about-us .free-content .icons > div{
+    width: 100%;
+    margin: 0px 25px;
+}
+
+.about-us .free-content .icons > div > .span-icon{
+    width: 100%;
+    font-size: 70px;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.about-us .free-content .icons > div h6{
+    font-size: 30px;
+    font-weight: 800;
+    color: white;
+    font-weight: normal;
+    margin: 20px 0 5px 0px;
+    text-align: center;
+}
+
+.about-us .free-content .icons > div p{
+    font-size: 18px;
+    text-align: center;
+    color: white;
+}
+
+
+/*galeria de imagenes*/
+.galery-section{
+    width: 100%;
+}
+
+.animal-icon{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.animal-icon i{
+    font-size: 120px;
+    color: black;
+}
+
+.galery-contents{
+    width: 90%;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 230px);
+    grid-gap: 10px;
+}
+
+.galery-contents .img-card{
+    width: 100%;
+    height: 100%;
+}
+
+.galery-contents .img-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    display: none;
+}
+
+.modal #imgModal{
+    width: 75%;
+    height: 75%;
+    margin: 50px auto;
+    display: block;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.modal #caption{
+    text-align: center;
+    color: white;
+    font: 25px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.modal #closeModal{
+    position: absolute;
+    right: 30px;
+    top: 10px;
+    font-size: 30px;
+    transition: 200ms;
+    cursor: pointer;
+    color: white;
+}
+
+/*footer*/
+footer{
+    width: 100%;
+    height: 60px;
+    margin-top: 100px;
+    background-color: black;
+}
+
+footer p{
+    text-align: center;
+    line-height: 60px;
+    color: white;
+}
+
+
+/*responsive*/
+@media only screen and (max-width:805px){
+    .btn-menu{
+        display: block;
+        color: white;
+        position: absolute;
+        top: 12px;
+        right: 30px;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .menu .list-container{
+        position: absolute;
+        top: 60px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background-color: black;
+        border-top: 3px solid white;
+    }
+
+    .menu .list-container .list{
+        display: block;
+        width: 90%;
+        margin: 50px auto;
+    }
+
+    .menu .list-container .list li{
+        display: flex;
+        justify-content: center;
+        border-bottom: 2px solid white;
+    }
+
+    .menu .list-container .list li a{
+        margin: 5px 0px;
+    }
+
+    .img-header .welcome{
+        width: 80%;
+        margin: auto;
+    }
+
+    .img-header .welcome h4{
+        font-size: 30px;
+        line-height: 45px;
+    }
+
+    .img-header .welcome > h1 a{
+        font-size: 40px;
+    }
+
+    .about-us .info h3{
+        font-size: 35px;
+    }
+
+    .about-us .info p{
+        font-size: 18px;
+    }
+
+    .galery-contents{
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(12, 350px);
+        grid-gap: 20px;
+    }
+
+    .modal #imgModal{
+        width: 95%;
+        height: 55%;
+    }
+}
+
+@media only screen and (max-width:560px){
+    .about-us .free-content .icons{
+        display: block;
+        margin: 0px;
+        padding: 10px 0px;
+    }
+
+    .about-us .free-content .icons > div{
+        margin: 50px 15px;
+    }
+
+    .about-us .free-content .icons > div > .span-icon{
+        font-size: 55px;
+    }
+}
+
+@media only screen and (max-width:280px){
+    .img-header .welcome h4{
+        font-size: 20px;
+    }
+
+    .img-header .welcome h1{
+        font-size: 35px;
+    }
+
+}
